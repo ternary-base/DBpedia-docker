@@ -36,6 +36,7 @@ virtuoso:
 		-e "NumberOfBuffers=$((64*85000))" \
 		-v ${DIR}/db:/data \
 		-v ${DIR}/virtuoso/virtuoso.ini:/data/virtuoso.ini \
+		-p 8890:8890
 		-v ${DIR}/dbpedia:/import \
 		--net=host
 		-d tenforce/virtuoso
