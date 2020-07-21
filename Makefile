@@ -1,5 +1,5 @@
 DIR=$(shell pwd)
-YEAR ?= 2015-10
+YEAR ?= 2016-10
 
 # Preparation procedures
 
@@ -37,7 +37,9 @@ virtuoso:
 		-v ${DIR}/db:/data \
 		-v ${DIR}/virtuoso/virtuoso.ini:/data/virtuoso.ini \
 		-v ${DIR}/dbpedia:/import \
+		--net=host
 		-d tenforce/virtuoso
+	
 
 # stops and removes virtuoso
 stop-virtuoso:
